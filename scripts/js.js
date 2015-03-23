@@ -64,4 +64,16 @@ $(document).ready(function() {
 
   });
 
+  // clear the list of all items
+  $('#clear-button').click(function() {
+    // console.log($('#list-items').children().length);
+    if ($('#list-items').children().length !== 0) {
+      var clearList = confirm("Are you sure you want to clear the list?");
+      if (clearList) {
+        $('#list-items').empty();
+      }
+    }
+    textInputFocus();
+  });
+
 }); // end document.ready
