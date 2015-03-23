@@ -41,4 +41,27 @@ $(document).ready(function() {
     $(this).parent().remove();
   });
 
+  // toggle item status between not done and done
+  $('#list-items').on('click', '.check-undo', function() {
+
+    var target = $(this).children('i');
+
+    // if item is not done - has class fa-check
+    // if item is done - has class fa-undo
+    if (target.hasClass('fa-check')) {
+      // alert('changing item status to done');
+      target.addClass('fa-undo');
+      target.removeClass('fa-check');
+      $(this).parent().addClass('itemDone');
+      $(this).parent().removeClass('itemNotDone');
+    } else if (target.hasClass('fa-undo')) {
+      // alert('changing item status to NOT done');
+        target.addClass('fa-check');
+        target.removeClass('fa-undo');
+        $(this).parent().addClass('itemNotDone');
+        $(this).parent().removeClass('itemDone');        
+    }
+
+  });
+
 }); // end document.ready
