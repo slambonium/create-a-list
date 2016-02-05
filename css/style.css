@@ -25,7 +25,8 @@ header img {
   width: 6em;
   height: 2.5em;
   line-height: 2.5em;
-  background-color: rgba(125, 125, 125, 0.5);
+  /*background-color: rgba(125, 125, 125, 0.5);*/
+  background-color: rgba(225, 225, 0, 0.75);
   border: 1px solid #888;
   border-radius: 1.25em;
   box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5) inset;
